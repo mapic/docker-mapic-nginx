@@ -2,7 +2,7 @@ language: generic
 services:
   - docker
 install:
-  - docker build -t mapic/nginx .
+  - docker build -t mapic/nginx . > /dev/null
 script:
   - docker run -d --name nginx mapic/nginx nginx -t
 
