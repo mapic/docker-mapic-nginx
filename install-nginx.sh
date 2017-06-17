@@ -5,7 +5,8 @@
 #
 
 # NGINXVER=1.6.2
-NGINXVER=1.10.2
+# NGINXVER=1.10.2
+NGINXVER=1.13.1
 
 die() {
     exit 1
@@ -46,8 +47,8 @@ cd nginx-${NGINXVER} || die
     --with-http_sub_module \
     --with-mail \
     --with-mail_ssl_module || die
-make || die
-make install || die
+make -s || die
+make -s install || die
 ln -sf /usr/share/nginx/sbin/nginx  /usr/sbin/nginx || die
 
 mkdir /etc/nginx/sites-enabled || die
