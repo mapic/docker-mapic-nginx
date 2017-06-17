@@ -4,14 +4,12 @@
 # Install NginX with latest SSL
 #
 
-# NGINXVER=1.6.2
 # NGINXVER=1.10.2
 NGINXVER=1.13.1
 
 die() {
     exit 1
 }
-
 
 cd /tmp/
 wget http://nginx.org/download/nginx-${NGINXVER}.tar.gz || die
