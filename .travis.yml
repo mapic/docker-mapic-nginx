@@ -4,7 +4,7 @@ services:
 install:
   - docker build -t mapic/nginx .
 script:
-  - docker run -d --rm --name nginx mapic/nginx nginx -t
+  - docker run -d --name nginx mapic/nginx nginx -t
 
 
   
