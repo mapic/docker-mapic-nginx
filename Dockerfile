@@ -3,7 +3,7 @@
 #
 
 FROM mapic/xenial:latest
-MAINTAINER Knut Ole Sjøli <knutole@mapic.io>
+MAINTAINER knutole@mapic.io
 
 # install openssl
 ADD ./install-openssl.sh /tmp/
