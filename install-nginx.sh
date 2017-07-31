@@ -4,8 +4,9 @@
 # Install NginX with latest SSL
 #
 
-# NGINXVER=1.10.2
-NGINXVER=1.13.1
+# latest version
+# see: 
+NGINXVER=1.13.3
 
 die() {
     exit 1
