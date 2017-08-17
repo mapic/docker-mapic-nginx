@@ -1,6 +1,4 @@
-##
 # mapic/nginx:latest
-#
 
 FROM mapic/xenial:latest
 MAINTAINER knutole@mapic.io
@@ -29,7 +27,12 @@ EXPOSE 80 443
 ENV TERM xterm
 
 # workdir
-WORKDIR /mapic/config
+RUN mkdir -p /mapic
+WORKDIR /mapic
+
+# add config
+ADD ./mapic-entrypoint.sh /mapic
+ADD ./nginx.conf /mapic
 
 # entrypoint
-CMD ["nginx", "-c", "/mapic/config/nginx.conf"]
+CMD ["bash", "/mapic/mapic-entrypoint.sh"]
