@@ -30,11 +30,9 @@ ENV TERM xterm
 RUN mkdir -p /mapic
 WORKDIR /mapic
 
-RUN touch /mapic/touched
-
 # add config
 ADD ./mapic-entrypoint.sh /mapic
 ADD ./nginx.conf /mapic
 
 # entrypoint
-CMD ["bash", "/mapic/mapic-entrypoint.sh"]
+CMD ./mapic-entrypoint.sh
